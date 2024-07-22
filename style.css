@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* fonts links */
+@font-face {
+  font-family: "outfit";
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "young-serif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0;
+  gap: 0;
+}
+h1 {
+  color: hsl(24, 5%, 18%);
+  font-family: "young-serif";
+  font-size: 60px;
+}
+h2 {
+  color: hsl(14, 45%, 36%);
+  font-family: "young-serif";
+  font-size: 39px;
+}
+h3 {
+  font-family: "outfit";
+  font-size: 25px;
+  font-weight: 700;
+  color: hsl(332, 51%, 32%);
+}
+h4 {
+  font-size: 24px;
+  font-family: "outfit";
+  font-weight: 400;
+  color: hsl(24, 5%, 18%);
+}
+/* laptop screen  */
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  width: 80%;
+  height: 50vh;
+  background-image: url(./assets/images/image-omelette.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px 0 rgb(222, 220, 220);
+}
+.item-name {
+  display: flex;
+  margin: 40px 130px;
+}
+.headline {
+  width: 80%;
+  height: auto;
+  margin: 40px 130px;
+}
+/* .preparation-time */
+.preparation-time {
+  width: 80%;
+  height: 40vh;
+  border-radius: 10px;
+  margin: 50px 130px;
+  background-color: hsl(330, 100%, 98%);
+  box-shadow: 0 0px 10px 0 rgb(234, 231, 231);
+  padding: 30px 40px;
+}
+.preparation-time > div > h4 {
+  display: flex;
+  margin: 20px 20px;
+}
+/* ingredients */
+.ingredients {
+  width: 80%;
+  height: 60vh;
+  margin: 50px 130px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+  padding: 30px 0px;
+  font-family: "outfit";
+}
+.ingredients > div > h4 {
+  display: flex;
+  margin: 25px 30px;
+  color: hsl(30, 10%, 34%);
+}
+.ingredients > div > h4 > li {
+  position: relative;
+  right: 1rem;
+}
+/* .instruction */
+.instruction {
+  min-width: 80%;
+  height: 90vh;
+  margin: 50px 150px;
+  padding: 30px 0px;
+  font-family: "outfit";
+}
+.instruction > div {
+  margin: 25px 60px;
+  color: hsl(30, 10%, 34%);
+  font-size: 24px;
+}
+.instruction > div > li {
+  position: relative;
+  right: 3rem;
+  top: 1.5rem;
+  list-style-type: decimal;
+  font-weight: 700;
+}
+/* nutrition  */
+.nutrition {
+  min-width: 80%;
+  height: 90vh;
+  margin: 50px 150px;
+  padding: 30px 0px;
+  font-family: "outfit";
+}
+.nutrition > div {
+  margin: 25px 0px;
+  color: hsl(30, 10%, 34%);
+  font-size: 24px;
+}
+.nutri > div> div {
+  margin: 25px 60px;
+  color: hsl(30, 10%, 34%);
+  font-size: 24px;
+}
