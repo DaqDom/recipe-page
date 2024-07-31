@@ -3,143 +3,204 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* fonts links */
 @font-face {
   font-family: "outfit";
   src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
-}
-@font-face {
   font-family: "young-serif";
   src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  letter-spacing: 0;
-  gap: 0;
+:root {
+  --color-Nutmeg: hsl(14, 45%, 36%);
+  --color-Dark-Raspberry: hsl(332, 51%, 32%);
+  --color-White: hsl(0, 0%, 100%);
+  --color-RoseWhite: hsl(330, 100%, 98%);
+  --color-Eggshell: hsl(30, 54%, 90%);
+  --color-LightGrey: hsl(30, 18%, 87%);
+  --color-WengeBrown: hsl(30, 10%, 34%);
+  --color-DarkCharcoal: hsl(24, 5%, 18%);
 }
 h1 {
-  color: hsl(24, 5%, 18%);
+  color: var(--color-DarkCharcoal);
   font-family: "young-serif";
-  font-size: 60px;
 }
 h2 {
-  color: hsl(14, 45%, 36%);
+  color: var(--color-Nutmeg);
   font-family: "young-serif";
-  font-size: 39px;
 }
 h3 {
+  color: var(--color-Dark-Raspberry);
   font-family: "outfit";
-  font-size: 25px;
-  font-weight: 700;
-  color: hsl(332, 51%, 32%);
 }
 h4 {
-  font-size: 24px;
+  color: var(--color-DarkCharcoal);
   font-family: "outfit";
   font-weight: 400;
-  color: hsl(24, 5%, 18%);
 }
-/* laptop screen  */
-.img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.img {
-  width: 80%;
-  height: 50vh;
-  background-image: url(./assets/images/image-omelette.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 1rem auto;
-  border-radius: 10px;
-  box-shadow: 0 3px 15px 0 rgb(222, 220, 220);
-}
-.item-name {
-  display: flex;
-  margin: 40px 130px;
-}
-.headline {
-  width: 80%;
-  height: auto;
-  margin: 40px 130px;
-}
-/* .preparation-time */
-.preparation-time {
-  width: 80%;
-  height: 40vh;
-  border-radius: 10px;
-  margin: 50px 130px;
-  background-color: hsl(330, 100%, 98%);
-  box-shadow: 0 0px 10px 0 rgb(234, 231, 231);
-  padding: 30px 40px;
-}
-.preparation-time > div > h4 {
-  display: flex;
-  margin: 20px 20px;
-}
-/* ingredients */
-.ingredients {
-  width: 80%;
-  height: 60vh;
-  margin: 50px 130px;
-  border-bottom: 1px solid hsl(30, 18%, 87%);
-  padding: 30px 0px;
+ul,
+ol,
+p,
+b {
+  color: var(--color-DarkCharcoal);
   font-family: "outfit";
 }
-.ingredients > div > h4 {
-  display: flex;
-  margin: 25px 30px;
-  color: hsl(30, 10%, 34%);
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    background-color: var(--color-White);
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    font-size: 16px;
+  }
+  .img {
+    width: 100%;
+    height: 30vh;
+    background-image: url(./assets/images/image-omelette.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
+  .item-name {
+    padding: 20px 30px;
+  }
+  .contents {
+    padding: 15px 30px;
+    text-align: left;
+  }
+  .preparation-time {
+    width: 100%;
+    height: 30vh;
+    max-height: 30vh;
+    background-color: var(--color-RoseWhite);
+    margin: 50px 30px;
+    padding: 20px 30px;
+    border-radius: 10px;
+  }
+  .preparation-list > ul {
+    margin: 10px 30px;
+  }
+  ul > li {
+    margin: 10px auto;
+  }
+  .ingredients {
+    margin: 50px 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-Eggshell);
+  }
+  .ingredients-list > ul {
+    margin: 20px 30px;
+  }
+  .ingredients-list > ul > li {
+    margin: 15px auto;
+  }
+  /* instruction */
+  .instruction {
+    margin: 50px 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-Eggshell);
+  }
+  .instruction-list > ol {
+    margin: 20px 30px;
+  }
+  .instruction-list > ol > li {
+    margin: 15px auto;
+  }
+  /* nutrition */
+  .nutrition {
+    margin: 50px 30px;
+    padding-bottom: 20px;
+    /* border-bottom: 1px solid var(--color-Eggshell); */
+  }
+  .direction {
+    margin: 20px auto;
+  }
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 1.5rem;
+  }
+  .grids > p {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-Eggshell);
+  }
+  .grids > b {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-Eggshell);
+  }
 }
-.ingredients > div > h4 > li {
-  position: relative;
-  right: 1rem;
-}
-/* .instruction */
-.instruction {
-  min-width: 80%;
-  height: 90vh;
-  margin: 50px 150px;
-  padding: 30px 0px;
-  font-family: "outfit";
-}
-.instruction > div {
-  margin: 25px 60px;
-  color: hsl(30, 10%, 34%);
-  font-size: 24px;
-}
-.instruction > div > li {
-  position: relative;
-  right: 3rem;
-  top: 1.5rem;
-  list-style-type: decimal;
-  font-weight: 700;
-}
-/* nutrition  */
-.nutrition {
-  min-width: 80%;
-  height: 90vh;
-  margin: 50px 150px;
-  padding: 30px 0px;
-  font-family: "outfit";
-}
-.nutrition > div {
-  margin: 25px 0px;
-  color: hsl(30, 10%, 34%);
-  font-size: 24px;
-}
-.nutri > div> div {
-  margin: 25px 60px;
-  color: hsl(30, 10%, 34%);
-  font-size: 24px;
+
+@media screen and (max-width: 1440px) {
+  main {
+    width: 100%;
+    background-color: var(--color-RoseWhite);
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper {
+    background-color: var(--color-White);
+    width: 50%;
+    max-width: 50%;
+    height: fit-content;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 40px 20px;
+  }
+  .img{
+    width: 100%;
+    height: 40vh;
+    background-image: url(./assets/images/image-omelette.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px; 
+    margin-top: -1rem;
+  }.item-name,
+  .contents,
+  .ingredients,
+  .instruction,
+  .nutrition {
+    margin: 50px auto;
+  }
+  .ingredients,
+  .instruction {
+    border-bottom: 1px solid var(--color-Eggshell);
+    padding-bottom: 20px;
+  }
+  .ingredients-list,
+  .instruction-list,
+  .preparation-list,
+  .grids {
+    margin: 20px 30px;
+  }
+  ul li {
+    margin: 15px auto;
+  }
+  ol li {
+    margin: 15px auto;
+  }
+  .direction {
+    margin: 15px auto;
+  }
+  .preparation-time {
+    width: 100%;
+    height: 30vh;
+    max-height: 30vh;
+    background-color: var(--color-RoseWhite);
+    margin: 20px auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+  }
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 1.5rem;
+  }
+  .grids > p {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-Eggshell);
+  }
+  .grids > b {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-Eggshell);
+  }
 }
